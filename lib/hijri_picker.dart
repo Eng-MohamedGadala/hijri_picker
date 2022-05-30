@@ -338,16 +338,15 @@ class _DatePickerHeader extends StatelessWidget {
         onTap: Feedback.wrapForTap(
             () => _handleChangeMode(DatePickerMode.day), context),
         child: new Semantics(
-          selected: mode == DatePickerMode.day,
-          child: new Text("${hSelectedDate.toFormat("DD,dd MMMM")}",
-              style: dayStyle),
-        ),
+            selected: mode == DatePickerMode.day,
+            child: new Text("${hSelectedDate.toFormat("DD,dd MMMM")}",
+                style: dayStyle)),
       ),
     );
 
     return new Container(
       width: width,
-      height: height,
+      // height: height,
       padding: padding,
       color: backgroundColor,
       child: new Column(

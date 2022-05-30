@@ -9,6 +9,7 @@ void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+  final ThemeData theme = ThemeData();
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -18,14 +19,18 @@ class MyApp extends StatelessWidget {
           GlobalWidgetsLocalizations.delegate,
         ],
         supportedLocales: [
-          //     const Locale('en', 'USA'),
+          const Locale('en', 'USA'),
           const Locale('ar', 'SA'),
         ],
         debugShowCheckedModeBanner: false,
-        theme: new ThemeData(
+        theme: 
+
+         ThemeData(
           primaryColor: Colors.brown,
           accentColor: Colors.green,
           brightness: Brightness.dark,
+          textTheme: TextTheme(headlineSmall: TextStyle(color: Colors.red))
+          
         ),
         home: MyHomePage(title: "Umm Alqura Calendar"));
   }
@@ -50,6 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: new AppBar(
         title: new Text(widget.title),
       ),
+      
       body: new Padding(
         padding: const EdgeInsets.all(8.0),
         child: new Center(
