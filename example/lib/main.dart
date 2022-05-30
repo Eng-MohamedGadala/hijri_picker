@@ -29,7 +29,6 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.brown,
           accentColor: Colors.green,
           brightness: Brightness.dark,
-          textTheme: TextTheme(headlineSmall: TextStyle(color: Colors.red))
           
         ),
         home: MyHomePage(title: "Umm Alqura Calendar"));
